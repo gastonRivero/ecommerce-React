@@ -6,7 +6,7 @@ const ImgCard = () => {
     <img
       src={fotos}
       className="card-img-top"
-      Style={{ width: "50%", heigth: "100%" }}
+      Style={{ width: "50px", heigth: "100px" }}
       alt="Tequila"
     />
   );
