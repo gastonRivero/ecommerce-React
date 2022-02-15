@@ -11,6 +11,7 @@ const Item = ({ bebidas }) => {
         Style={{ width: "40vh", heigth: "100vh" }}
         alt={bebidas.name}
       />
+      <button className="btn btn-primary">Ver descripción</button>
       <p className="card-text">{bebidas.description}</p>
       <h5 className="card-title">$ {bebidas.precio}</h5>
       <div className="row align-items-center">
