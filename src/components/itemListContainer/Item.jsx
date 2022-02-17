@@ -8,7 +8,6 @@ const Item = ({ bebidas }) => {
       <img
         src={bebidas.imagen}
         className="card-img-top "
-        Style={{ width: "40vh", heigth: "100vh" }}
         alt={bebidas.name}
       />
       <button className="btn btn-primary">Ver descripción</button>

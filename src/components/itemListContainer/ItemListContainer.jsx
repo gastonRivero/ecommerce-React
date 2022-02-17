@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 
 const ItemListContainer = ({ nombre }) => {
@@ -32,32 +32,46 @@ const ItemListContainer = ({ nombre }) => {
     },
   ];
 
+const[data, setData] = useState(null);
+
+  
+useEffect (() =>{
   const beber = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(bebidas);
     }, 2000);
+    // reject ("No hay resultados")
   });
 
   beber
     .then((result) => {
-      console.log(result);
+      setData(result);
     })
     .catch((err) => {
       console.log(err);
     });
+  },[])
+
+  
+    
 
   return (
     <div>
-      <h4>Bienvenidos a {nombre}</h4>
-      <div className="d-flex justify-content-around">
+      {data == null
+       ? 
+       <h1> no hay productos</h1> 
+       :
+        <div className="d-flex justify-content-around">
         <div className="card">
           <div className="card-body">
             <ItemList bebidas={bebidas}/>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };
+
+
 
 export default ItemListContainer;
