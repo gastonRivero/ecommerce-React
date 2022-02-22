@@ -20,4 +20,4 @@ Los componentes utilizados se alojan en distintas carpetas en la raiz "component
 - itemDetail: Aloja solo a ItemDetail.jsx, este componente se encarga de renderizar los datos otorgados por el "ItemDetailContainer".
 - itemListContainer: está compuesto por los componentes Item.jsx, ItemList.jsx, ItemListContainer.jsx. El "ItemListContainer" se encarga de consultar todos los productos y pasarselos al "ItemList", por su parte, este requiere un array de productos, se encarga de hacer un map y pasarle los datos al "Item" que por último  recibe todos los datos requeridos para renderizar un producto en pantalla (previsualizacion del producto)
 		Aquí dentro tambien se enceuntra la carpeta category, que aloja a Tequila y Whisky.
-navbar: Aloja solo a Navbar.jsx.
+- navbar: Aloja solo a Navbar.jsx.
