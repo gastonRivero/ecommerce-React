@@ -23,15 +23,15 @@ const ItemCount = ({ stock, initial }) => {
       <button
         className="btn btn-danger"
         onClick={() => onRest()}
-        style={{ width: "20vh", height: "8vh" }}
+        style={{ width: "5rem", height: "3rem" }}
         >
         -
       </button>
-      <h1 style={{ width: "20vh", hight: "5vh" }}>{counter}</h1>
+      <h1 style={{ width: "20rem", hight: "5rem" }}>{counter}</h1>
       <button
         onClick={() => onAdd()}
         className="btn btn-info"
-        style={{ width: "20vh", height: "8vh" }}
+        style={{ width: "5rem", height: "3rem" }}
       >
         +
       </button>
