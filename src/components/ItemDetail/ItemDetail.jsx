@@ -14,14 +14,8 @@ export const ItemDetail = ({ item }) => {
 <p className="card-text text-center" style={{height: "3rem"}}>{item.description}</p>
 <h5 className="card-title text-uppercasse text-center">$ {item.precio}</h5>
 <div>
-  <ItemCount stock={item.stock} initial={0} />
+  <ItemCount item={item} stock={item.stock} initial={1} />
 </div>
-<div>
-<a href="#" className="btn btn-dark">
-  Añadir
-</a>
-</div>
-
 </div>
   );
 };

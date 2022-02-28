@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ItemDetail from "../itemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import ItemDetail from "../itemDetail/ItemDetail";
+
 
 const item = [
   {
@@ -57,9 +58,8 @@ const item = [
 
 
 const ItemDetailContainer = () => {
-  const { id } = useParams();
+  const { id } = useParams();  
   const [data, setData] = useState(null);
-
   useEffect(() => {
     const tarea = new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -74,7 +74,7 @@ const ItemDetailContainer = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+    },[]);
 
   return (
     <div>
@@ -83,7 +83,6 @@ const ItemDetailContainer = () => {
     ) : (
       <div className="container-fluid">
         <ItemDetail item={data}/>
-        <h2>{id.id}</h2>
       </div>
     )}
   </div>
