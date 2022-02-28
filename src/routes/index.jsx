@@ -4,20 +4,21 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 import ItemDetailContainer from "../components/itemDetailContainer/ItemDetailContainer";
 import Cart from "../components/cart/Cart";
-import Tequila from "../components/itemListContainer/category/Tequila";
-import Whisky from "../components/itemListContainer/category/Whisky";
+import Prueba from "../components/Prueba";
 
-const Rutas = () => {
+const Rutas = (bebidas) => {
   return (
       <BrowserRouter>
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<ItemListContainer/>} />
-        <Route path="/category/tequilas" element={<Tequila/>} />
-        <Route path="/category/whiskys" element={<Whisky/>} />
+        {/* <Route path="/category/tequilas" element={<ItemDetailContainer/>} />
+        <Route path="/category/whiskys" element={<ItemDetailContainer/>} /> */}
         <Route path="/cart" element={<Cart />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="/category/:categoryId" element={<ItemListContainer />} />
+        <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+        <Route path="/desafiosAdeudados" element={<Prueba/>} />
       </Routes>
         <Footer />
     </BrowserRouter>

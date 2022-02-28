@@ -82,7 +82,7 @@ const ItemDetailContainer = () => {
       <h1> Cargando...</h1>
     ) : (
       <div className="container-fluid">
-        <ItemDetail item={item}/>
+        <ItemDetail item={data}/>
         <h2>{id.id}</h2>
       </div>
     )}
