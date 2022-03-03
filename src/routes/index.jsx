@@ -6,7 +6,7 @@ import ItemDetailContainer from "../components/itemDetailContainer/ItemDetailCon
 import Cart from "../components/cart/Cart";
 import Prueba from "../components/Prueba";
 
-const Rutas = (bebidas) => {
+const Rutas = () => {
   return (
       <BrowserRouter>
       <Navbar />

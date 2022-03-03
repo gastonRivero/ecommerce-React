@@ -6,11 +6,10 @@ const CarritoProv = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
 
   const agregarAlCarrito = (item) => {
-    setCarrito([...CarritoContext, item]);
+    setCarrito([...carrito, item]);
   };
 
   let nombre = "gasti";
-
 
   return (
     <CarritoContext.Provider value={{ nombre, agregarAlCarrito, carrito }}>
