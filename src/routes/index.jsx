@@ -13,11 +13,9 @@ const Rutas = () => {
       
       <Routes>
         <Route path="/" element={<ItemListContainer/>} />
-        {/* <Route path="/category/tequilas" element={<ItemDetailContainer/>} />
-        <Route path="/category/whiskys" element={<ItemDetailContainer/>} /> */}
         <Route path="/cart" element={<Cart />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
+        <Route path="/category/:categoryId" element={<ItemListContainer />}/>
         <Route path="/desafiosAdeudados" element={<Prueba/>} />
       </Routes>
         <Footer />

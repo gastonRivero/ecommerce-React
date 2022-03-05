@@ -9,10 +9,10 @@ const CarritoProv = ({ children }) => {
     setCarrito([...carrito, item]);
   };
 
-  let nombre = "gasti";
+
 
   return (
-    <CarritoContext.Provider value={{ nombre, agregarAlCarrito, carrito }}>
+    <CarritoContext.Provider value={{ agregarAlCarrito, carrito }}>
       {children}
     </CarritoContext.Provider>
   );

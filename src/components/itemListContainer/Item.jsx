@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const Item = ({ bebidas }) => {
+  
   return (
           <div className="card" style={{ width: "18rem" }}>
             <h4 className="card-title">{bebidas.name}</h4>

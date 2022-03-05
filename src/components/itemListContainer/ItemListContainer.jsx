@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
@@ -38,7 +39,8 @@ const ItemListContainer = () => {
       name: "Buchanan's",
       description: "Whisky 18 años. 750ML.",
       stock: 7,
-      imagen:"https://static.wixstatic.com/media/4787b9_5a04c7854b004bc593396b6e31c13b09~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+      imagen:
+        "https://static.wixstatic.com/media/4787b9_5a04c7854b004bc593396b6e31c13b09~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
       precio: 8975,
       category: "Whisky",
     },
@@ -47,12 +49,14 @@ const ItemListContainer = () => {
       name: "The Glenlivet",
       description: "Whisky single malt 15 años. 750ML.",
       stock: 5,
-      imagen:"https://gobar.vteximg.com.br/arquivos/ids/155811-500-500/01032600126.jpg?v=636685828646500000",
+      imagen:
+        "https://gobar.vteximg.com.br/arquivos/ids/155811-500-500/01032600126.jpg?v=636685828646500000",
       precio: 13456,
       category: "Whisky",
     },
   ];
 
+  const { categoryId } = useParams();
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -65,12 +69,17 @@ const ItemListContainer = () => {
 
     beber
       .then((result) => {
-        setData(result);
+        const filtro = result.filter((b) => b.category === categoryId);
+        if (filtro.length === 0) {
+          setData(result);
+        } else {
+          setData(filtro);
+        }
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [categoryId]);
 
   return (
     <div>
@@ -78,7 +87,7 @@ const ItemListContainer = () => {
         <h1> Cargando...</h1>
       ) : (
         <div className="container-fluid">
-          <ItemList bebidas={bebidas} />
+          <ItemList bebidas={data} />
         </div>
       )}
     </div>
