@@ -6,6 +6,8 @@ function Navbar() {
   const categoria = [
     { id: 0, category: "Tequila" },
     { id: 1, category: "Whisky" },
+    { id: 2, category: "Ginebra" },
+    { id: 3, category: "Cerveza" },
   ];
 
   return (
