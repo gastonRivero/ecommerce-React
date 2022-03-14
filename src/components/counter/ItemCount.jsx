@@ -11,6 +11,7 @@ const ItemCount = ({ item, stock, initial }) => {
   const onAdd = () => {
     if (stock > 0 && counter !== stock) {
       increment();
+      
     }
   };
   const onRest = () => {

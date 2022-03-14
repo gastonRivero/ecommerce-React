@@ -4,6 +4,8 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import { CarritoContext } from "../../context/CarritoProv";
 
+import "../cart/cart.css";
+
 const CartWidget = () => {
   const { carrito } = useContext(CarritoContext);
 
@@ -20,7 +22,10 @@ const CartWidget = () => {
           color: "black",
         }}
       >
-        <FontAwesomeIcon icon={faShoppingCart} /> {carrito.length}
+        <FontAwesomeIcon icon={faShoppingCart} />
+        <div className="ProductNum">
+          {carrito.length === 0 ? "" : carrito.length}
+        </div>
       </NavLink>
     </div>
   );
