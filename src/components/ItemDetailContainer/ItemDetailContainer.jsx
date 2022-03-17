@@ -13,7 +13,7 @@ const item = [
       "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1621260365-41ZWZinUm7L._SL500_.jpg",
     precio: 4850,
     category: "Tequila",
-    amount:0,
+    quantity:0,
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const item = [
       "https://gobar.vteximg.com.br/arquivos/ids/155868-500-500/01032400018.jpg?v=636685828914000000",
     precio: 5850,
     category: "Tequila",
-    amount:0,
+    quantity:0,
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const item = [
       "https://bottegaalcolica.com/12429-large_default/tequila-corralejo-blanco.jpg",
     precio: 7200,
     category: "Tequila",
-    amount:0,
+    quantity:0,
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const item = [
       "https://http2.mlstatic.com/D_NQ_NP_725987-MLA45656458467_042021-O.webp",
     precio: 4850,
     category: "Tequila",
-    amount:0,
+    quantity:0,
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const item = [
       "https://gobar.vteximg.com.br/arquivos/ids/155785-500-500/01032600054.jpg?v=636685828453900000",
     precio: 7482,
     category: "Whisky",
-    amount:0,
+    quantity:0,
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const item = [
       "http://d2r9epyceweg5n.cloudfront.net/stores/118/622/products/oo1-72048a6b56b7bdea7215593264591531-640-0.jpg",
     precio: 5950,
     category: "Whisky",
-    amount:0,
+    quantity:0,
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ const item = [
       "https://static.wixstatic.com/media/4787b9_5a04c7854b004bc593396b6e31c13b09~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
     precio: 8975,
     category: "Whisky",
-    amount:0,
+    quantity:0,
   },
   {
     id: 8,
@@ -90,7 +90,7 @@ const item = [
       "https://gobar.vteximg.com.br/arquivos/ids/155811-500-500/01032600126.jpg?v=636685828646500000",
     precio: 13456,
     category: "Whisky",
-    amount:0,
+    quantity:0,
   },
   {
     id: 9,
@@ -101,7 +101,7 @@ const item = [
       "https://gobar.vteximg.com.br/arquivos/ids/155741-500-500/01031900001.jpg?v=636685828081900000",
     precio: 4210,
     category: "Ginebra",
-    amount:0,
+    quantity:0,
   },
   {
     id: 10,
@@ -112,7 +112,7 @@ const item = [
       "https://http2.mlstatic.com/D_NQ_NP_669612-MLA43643320606_102020-O.jpg",
     precio: 3000,
     category: "Ginebra",
-    amount:0,
+    quantity:0,
   },
   {
     id: 11,
@@ -123,7 +123,7 @@ const item = [
       "https://http2.mlstatic.com/D_NQ_NP_820346-MLA43643305662_102020-O.webp",
     precio: 3500,
     category: "Ginebra",
-    amount:0,
+    quantity:0,
   },
   {
     id: 12,
@@ -131,10 +131,10 @@ const item = [
     description: "Botella Handcrafted. 750ML.",
     stock: 9,
     imagen:
-      "https://gobar.vteximg.com.br/arquivos/ids/155811-500-500/01032600126.jpg?v=636685828646500000",
+      "https://http2.mlstatic.com/D_NQ_NP_946083-MLA47036514812_082021-O.jpg",
     precio: 1856,
     category: "Ginebra",
-    amount:0,
+    quantity:0,
   },
   {
     id: 13,
@@ -145,7 +145,7 @@ const item = [
       "https://http2.mlstatic.com/D_NQ_NP_685208-MLA44839749640_022021-O.jpg",
     precio: 950,
     category: "Cerveza",
-    amount:0,
+    quantity:0,
   },
   {
     id: 14,
@@ -156,7 +156,7 @@ const item = [
       "https://juanse-tucuman.tiendalite.com/images/products/500/64-803.jpg",
     precio: 1120,
     category: "Cerveza",
-    amount:0,
+    quantity:0,
   },
   {
     id: 15,
@@ -167,7 +167,7 @@ const item = [
       "https://http2.mlstatic.com/D_NQ_NP_742342-MLA44839778478_022021-O.webp",
     precio: 1222,
     category: "Cerveza",
-    amount:0,
+    quantity:0,
   },
   {
     id: 16,
@@ -178,7 +178,7 @@ const item = [
       "https://http2.mlstatic.com/D_NQ_NP_942477-MLA44839755696_022021-O.jpg",
     precio: 1356,
     category: "Cerveza",
-    amount:0,
+    quantity:0,
   },
 ];
 

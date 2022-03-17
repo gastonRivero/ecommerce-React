@@ -1,61 +1,31 @@
-import { createContext, useState } from "react";
-
-export const CarritoContext = createContext();
+import React, { useState } from "react";
+import { Provider } from "./context";
 
 const CarritoProv = ({ children }) => {
+  // productos del carrito
   const [carrito, setCarrito] = useState([]);
+  //Total de productos
+  const [tot, setTot] = useState(0);
+  // valor total de los productos
+  const [value, setValue] = useState(0);
 
-  const agregarAlCarrito = (products) => {
-    const IsInCart = carrito.find((item) => item.id === products.id);
-    if (IsInCart) {
-      setCarrito(
-        carrito.map((item) =>
-          item.id === products.id
-            ? { ...IsInCart, quantity: IsInCart.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCarrito([...carrito, { ...products, quantity: 1 }]);
-    }
-  };
+  
 
-  const removeItem = (products) => {
-    const IsInCart = carrito.find((item) => item.id === products.id);
-    if (IsInCart.quantity === 1) {
-      setCarrito(carrito.filter((item) => item.id !== products.id));
-    } else {
-      setCarrito(
-        carrito.map((item) =>
-          item.id === products.id
-            ? { ...IsInCart, quantity: IsInCart.quantity - 1 }
-            : item
-        )
-      );
-    }
-  };
-
-  const precioTotal = carrito.reduce(
-    (precio, item) => precio + item.quantity * item.precio,
-    0
-  );
-
-  const removeAllItems = () => {
-    setCarrito([]);
-  };
+ 
 
   return (
-    <CarritoContext.Provider
+    <Provider
       value={{
         carrito,
-        agregarAlCarrito,
-        removeItem,
-        precioTotal,
-        removeAllItems,
+        setCarrito,
+        tot,
+        setTot,
+        value,
+        setValue,
       }}
     >
       {children}
-    </CarritoContext.Provider>
+    </Provider>
   );
 };
 

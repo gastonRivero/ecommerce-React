@@ -1,13 +1,13 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
+import context from "../../context/context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import { CarritoContext } from "../../context/CarritoProv";
 
 import "../cart/cart.css";
 
 const CartWidget = () => {
-  const { carrito } = useContext(CarritoContext);
+  const { tot } = useContext(context);
 
   return (
     <div>
@@ -23,9 +23,7 @@ const CartWidget = () => {
         }}
       >
         <FontAwesomeIcon icon={faShoppingCart} />
-        <div className="ProductNum">
-          {carrito.length === 0 ? "" : carrito.length}
-        </div>
+        <div className="ProductNum">{tot === 0 ? null : <p>{tot}</p>}</div>
       </NavLink>
     </div>
   );
