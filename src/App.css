@@ -36,16 +36,33 @@ body {
   margin: auto;
 }
 
-.footerH a{
+.footerH a {
   text-decoration: none;
   color: aliceblue;
 }
 
 .mFo {
   margin-top: 20vh;
-color: azure;
+  color: azure;
 }
 
 .spin {
   margin-top: 30vh;
+}
+
+.p-card {
+  margin-top: 5vh;
+}
+
+.h-card {
+  margin-top: 10vh;
+}
+
+.añadir-item,
+.volverAc-item {
+  padding: 12px;
+}
+
+.item-boton{
+margin-top: 5vh;
 }

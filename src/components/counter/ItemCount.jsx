@@ -7,7 +7,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     <>
       <div className="d-flex justify-content-center align-self-stretch">
         <button
-          className="btn btn-danger"
+          className="btn btn-secondary"
           onClick={() => {
             if (contador > initial) {
               setContador(contador - 1);
@@ -26,7 +26,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
               onAdd(contador + 1);
             }
           }}
-          className="btn btn-info"
+          className="btn btn-success"
           style={{ width: "5rem", height: "3rem" }}
         >
           +

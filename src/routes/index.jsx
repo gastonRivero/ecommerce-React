@@ -9,18 +9,17 @@ import Checkout from "../components/checkout/Checkout";
 
 const Rutas = () => {
   return (
-      <BrowserRouter>
+    <BrowserRouter>
       <Header />
       <Navbar />
-      
       <Routes>
-        <Route path="/" element={<ItemListContainer/>} />
+        <Route path="/" element={<ItemListContainer />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="/category/:categoryId" element={<ItemListContainer />}/>
-        <Route path="/checkout" element={<Checkout/>} />
+        <Route path="/category/:categoryId" element={<ItemListContainer />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
-        <Footer />
+      <Footer />
     </BrowserRouter>
   );
 };

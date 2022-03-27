@@ -5,15 +5,12 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../itemDetail/ItemDetail";
 import Spinner from "../utilities/Utilities";
 
-
-
-
 const ItemDetailContainer = () => {
-  const { id } = useParams();  
+  const { id } = useParams();
   const [data, setData] = useState(null);
-  
+
   const getDatabyId = async () => {
-    let data = collection(db, 'items');
+    let data = collection(db, "items");
     let col = await getDocs(data);
     let res = col.docs.map((doc) => (doc = { id: doc.id, ...doc.data() }));
     res = res.filter((item) => item.id === id);
@@ -23,20 +20,18 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     getDatabyId();
-  }, [])
-  
+  }, []);
+
   return (
     <div>
-    {data == null ? (
-      <Spinner />
-    ) : (
-      <div className="container-fluid">
-        <ItemDetail item={data}/>
-      </div>
-    )}
-  </div>
-
-
+      {data == null ? (
+        <Spinner />
+      ) : (
+        <div className="container-fluid">
+          <ItemDetail item={data} />
+        </div>
+      )}
+    </div>
   );
 };
 

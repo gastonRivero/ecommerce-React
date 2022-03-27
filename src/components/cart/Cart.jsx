@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import context from "../../context/context";
 import CartItem from "../cartItem/CartItem";
 import { Go, VolverAC } from "../utilities/Utilities";
-import carritoVacio from "../../assets/img/carritoVacio.png"
+import carritoVacio from "../../assets/img/carritoVacio.png";
 
 const Cart = () => {
   const { carrito, setCarrito, value, setValue, setTot } = useContext(context);
@@ -18,19 +18,19 @@ const Cart = () => {
       {carrito.length === 0 ? (
         <div className="cartForg">
           <h1> ¡Te olvidaste de agregar productos! </h1>
-          <img src={carritoVacio} className=" img-fluid"/>
+          <img src={carritoVacio} className=" img-fluid" alt=""/>
           <div className="volverAc">
-          <VolverAC />
+            <VolverAC />
           </div>
         </div>
       ) : (
         <div>
-          <div className="pt-5 mt-5 container ">
+          <div className=" container ">
             <h2 className="font-weight-bold pt-5"> Tu Carrito</h2>
             <hr />
           </div>
 
-          <div id="cart-container" className="container my-5 ">
+          <div id="cart-container" className="container my-1 ">
             <table style={{ width: "100%" }}>
               <thead>
                 <tr>
@@ -51,7 +51,7 @@ const Cart = () => {
               </div>
             );
           })}
-          <div>
+          <div className="my-5">
             <button className=" btn btn-danger" onClick={vaciarCarrito}>
               Vaciar carrito
             </button>
@@ -59,12 +59,10 @@ const Cart = () => {
           <div id="cart-bottom" className="container">
             <div className="row">
               <div className="coupon col-lg-6 col-md-6 col-12 mb-4">
-<div>
-  <h5>CUPÓN</h5>
-  <p>Si tenés un cupón, ingresalo aquí.</p>
-  <input type="text" placeholder="Ingresa tu cupón"/>
-  <button className="btn btn-dark">APLICAR CUPÓN</button>
-</div>
+                <div>
+                  <h5>🤨  ¡RECORDATORIO!  🤨</h5>
+                  <p>Una vez que termines la compra, asegurate de colocar bien tus datos de contacto, para poder realizar el envío correctamente.</p>
+                </div>
               </div>
               <div className="total col-lg-6 col-md-6 col-12">
                 <div>
@@ -75,7 +73,7 @@ const Cart = () => {
                   </div>
                   <hr className="second-hr" />
                   <div className="butt ml-auto">
-                    <Go carrito={carrito} value={value} />
+                    <Go />
                   </div>
                 </div>
               </div>
@@ -88,6 +86,4 @@ const Cart = () => {
 };
 
 export default Cart;
-{
-  /* <Checkout carrito={carrito} value={value} /> */
-}
+

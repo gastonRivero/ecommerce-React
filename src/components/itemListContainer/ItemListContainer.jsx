@@ -33,7 +33,7 @@ const ItemListContainer = () => {
   return (
     <div>
       {data == null ? (
-       <Spinner />
+        <div className="spin"> <Spinner /> </div>
       ) : (
         <div className="container-fluid">
           <ItemList bebidas={data} />

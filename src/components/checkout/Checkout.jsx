@@ -90,7 +90,7 @@ const Checkout = () => {
         )}
       </form>
       {ordenOk && (
-        <div>
+        <div className="alert alert-success" role={alert}>
           <img src={approved} className=" img-fluid" />
           <div>
             <h1>Felicitaciones, tu compra fue exitosa😎</h1>

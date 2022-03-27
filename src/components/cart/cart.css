@@ -50,6 +50,7 @@
 #cart-bottom .coupon>div {
     border: 1px solid #b6b3b3;
 }
+
 #cart-bottom .coupon h5,
 #cart-bottom .total h5 {
     background-color: #3a3a3a;
@@ -59,16 +60,11 @@
     font-weight: 700;
 }
 
-#cart-bottom .coupon p,
-#cart-bottom .coupon input{
+#cart-bottom .coupon p {
     padding: 0 12px;
 }
-#cart-bottom .coupon input{
-    height:44px ;
-}
-#cart-bottom .coupon input{
-    Margin:0 0 20px 12px ;
-}
+
+
 
 #cart-bottom .total>div {
     border: 1px solid #b6b3b3
@@ -94,9 +90,11 @@
     display: flex;
     justify-content: flex-end;
 }
-.cartForg{
+
+.cartForg {
     margin-top: 10vh;
 }
-.volverAc{
+
+.volverAc {
     margin-top: 5vh;
 }

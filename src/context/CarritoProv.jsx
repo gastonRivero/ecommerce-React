@@ -9,10 +9,6 @@ const CarritoProv = ({ children }) => {
   // valor total de los productos
   const [value, setValue] = useState(0);
 
-  
-
- 
-
   return (
     <Provider
       value={{

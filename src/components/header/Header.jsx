@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import CartWidget from "../cart/CartWidget";
-import Distillar from "../../assets/img/Distillar.png"
+import distiSinFondo from "../../assets/img/distiSinFondo.png";
 
 const Header = () => {
   return (
@@ -9,13 +9,12 @@ const Header = () => {
       <div className=" d-flex navbar-expand-lg navbar-light bg-light ">
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <NavLink className="navbar-brand" to={"/"}>
-            <img src={Distillar} className="img-fluid"/>
+            <img src={distiSinFondo} className="img-fluid" alt="" />
           </NavLink>
         </div>
         <div className="navbar-brand">
           <CartWidget />
         </div>
-
       </div>
     </div>
   );

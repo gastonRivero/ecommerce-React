@@ -113,25 +113,35 @@ export const ItemDetail = ({ item }) => {
         <div className="col-md-8">
           <div className="card-body">
             <h4 className="card-title">{item.name}</h4>
-            <p className="card-text" style={{ height: "3rem" }}>
+            <p className="p-card card-text" style={{ height: "3rem" }}>
               {item.description}
             </p>
-            <h5 className="card-title ">$ {item.precio}</h5>
-            <p className="card-text">Stock:{item.stock}</p>
-
-            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+            <h5 className="h-card card-title ">$ {item.precio}</h5>
+            <p className="p-card card-text">Stock:{item.stock}</p>
+            <div className="item-count">
+              <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+            </div>
             {btn ? (
-              <button onClick={sBtn} className={"btn btn-dark"}>
-                Deseo agregar {count} {item.name} al carrito.
-              </button>
+              <div className="item-boton">
+                <button onClick={sBtn} className={"btn btn-dark"}>
+                  Deseo agregar {count} {item.name} al carrito.
+                </button>
+              </div>
             ) : (
-              <div>
-                <Link to="/cart">
-                  <button onClick={agregarAlCarrito} className={"btn btn-dark"}>
-                    Añadir
-                  </button>
-                </Link>
-                <VolverAC />
+              <div className="d-flex justify-content-center">
+                <div className="añadir-item">
+                  <Link to="/cart">
+                    <button
+                      onClick={agregarAlCarrito}
+                      className={"btn btn-dark"}
+                    >
+                      Añadir
+                    </button>
+                  </Link>
+                </div>
+                <div className="volverAc-item">
+                  <VolverAC />
+                </div>
               </div>
             )}
           </div>
