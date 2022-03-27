@@ -8,7 +8,7 @@ const Footer = () => {
     <div>
       <div className="mFo bg-dark">
         <img src={footer} alt="" className=" img-fluid" />
-        <div className="footerH container-fluid">
+        <div className="footerH">
           <img src={distifoot} alt="" className=" img-fluid" />
           <ul>
             <li>

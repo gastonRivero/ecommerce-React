@@ -72,7 +72,7 @@ const Cart = () => {
                     <p>$ {value}</p>
                   </div>
                   <hr className="second-hr" />
-                  <div className="butt ml-auto">
+                  <div className="butt">
                     <Go />
                   </div>
                 </div>

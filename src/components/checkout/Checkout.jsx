@@ -34,6 +34,7 @@ const Checkout = () => {
 
   return (
     <>
+    <div className="container">
       <form onSubmit={handleSubmit}>
         <h4>Completá tus datos para finalizar la compra:</h4>
         <div className="mb-3">
@@ -83,12 +84,13 @@ const Checkout = () => {
               !form.buyer.name || !form.buyer.phone || !form.buyer.email
             }
             type="submit"
-            className="btn btn-primary w-100"
+            className="btn btn-dark w-100"
           >
             Terminar compra
           </button>
         )}
       </form>
+    </div>
       {ordenOk && (
         <div className="alert alert-success" role={alert}>
           <img src={approved} className=" img-fluid" />
