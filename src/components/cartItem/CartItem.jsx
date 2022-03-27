@@ -33,7 +33,6 @@ const CartItem = ({ item, e, setE }) => {
       if (item.i.item.id === p.i.item.id) {
         let pos = carrito.indexOf(p);
         if (p.count === p.i.item.stock) {
-          alert("límite de stock alcanzado"); //cambiar a popup
         } else {
           c[pos].count = p.count + 1;
           setCarrito(c);

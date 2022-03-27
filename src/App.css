@@ -24,7 +24,7 @@ body {
 
 
 .footerH li {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   padding: 30px;
@@ -63,6 +63,6 @@ body {
   padding: 12px;
 }
 
-.item-boton{
-margin-top: 5vh;
+.item-boton {
+  margin-top: 5vh;
 }

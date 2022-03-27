@@ -18,7 +18,7 @@ const Cart = () => {
       {carrito.length === 0 ? (
         <div className="cartForg">
           <h1> ¡Te olvidaste de agregar productos! </h1>
-          <img src={carritoVacio} className=" img-fluid" alt=""/>
+          <img src={carritoVacio} className=" img-fluid" alt="" />
           <div className="volverAc">
             <VolverAC />
           </div>
@@ -46,7 +46,7 @@ const Cart = () => {
           </div>
           {carrito.map((producto) => {
             return (
-              <div key={producto.id}>
+              <div key={producto.i.item.id}>
                 <CartItem item={producto} e={e} setE={setE} />
               </div>
             );
@@ -60,8 +60,12 @@ const Cart = () => {
             <div className="row">
               <div className="coupon col-lg-6 col-md-6 col-12 mb-4">
                 <div>
-                  <h5>🤨  ¡RECORDATORIO!  🤨</h5>
-                  <p>Una vez que termines la compra, asegurate de colocar bien tus datos de contacto, para poder realizar el envío correctamente.</p>
+                  <h5>🤨 ¡RECORDATORIO! 🤨</h5>
+                  <p>
+                    Una vez que termines la compra, asegurate de colocar bien
+                    tus datos de contacto, para poder realizar el envío
+                    correctamente.
+                  </p>
                 </div>
               </div>
               <div className="total col-lg-6 col-md-6 col-12">
@@ -86,4 +90,3 @@ const Cart = () => {
 };
 
 export default Cart;
-

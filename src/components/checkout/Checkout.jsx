@@ -34,75 +34,76 @@ const Checkout = () => {
 
   return (
     <>
-    <div className="container">
-      <form onSubmit={handleSubmit}>
-        <h4>Completá tus datos para finalizar la compra:</h4>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
-            Tu nombre:
-          </label>
-          <input
-            onChange={handleChange}
-            name="name"
-            value={form.buyer.name}
-            type="text"
-            className="form-control"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
-            Tu número de teléfono:
-          </label>
-          <input
-            onChange={handleChange}
-            name="phone"
-            value={form.buyer.phone}
-            type="number"
-            className="form-control"
-          />
-        </div>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
-            Tu email:
-          </label>
-          <input
-            onChange={handleChange}
-            name="email"
-            value={form.buyer.email}
-            type="email"
-            className="form-control"
-          />
-        </div>
+      <div className="container">
+        {ordenOk === false ? (
+          <form onSubmit={handleSubmit}>
+            <h4>Completá tus datos para finalizar la compra:</h4>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
+                Tu nombre:
+              </label>
+              <input
+                onChange={handleChange}
+                name="name"
+                value={form.buyer.name}
+                type="text"
+                className="form-control"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
+                Tu número de teléfono:
+              </label>
+              <input
+                onChange={handleChange}
+                name="phone"
+                value={form.buyer.phone}
+                type="number"
+                className="form-control"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
+                Tu email:
+              </label>
+              <input
+                onChange={handleChange}
+                name="email"
+                value={form.buyer.email}
+                type="email"
+                className="form-control"
+              />
+            </div>
 
-        {load ? (
-          <button disabled={true} className="btn btn-warning">
-            <Spinner />
-          </button>
+            {load ? (
+              <button disabled={true} className="btn btn-warning">
+                <Spinner />
+              </button>
+            ) : (
+              <button
+                disabled={
+                  !form.buyer.name || !form.buyer.phone || !form.buyer.email
+                }
+                type="submit"
+                className="btn btn-dark w-100"
+              >
+                Terminar compra
+              </button>
+            )}
+          </form>
         ) : (
-          <button
-            disabled={
-              !form.buyer.name || !form.buyer.phone || !form.buyer.email
-            }
-            type="submit"
-            className="btn btn-dark w-100"
-          >
-            Terminar compra
-          </button>
+          <>
+            <img src={approved} className=" img-fluid" alt="" />
+            <div>
+              <h1>Felicitaciones, tu compra fue exitosa😎</h1>
+              <h4>Te enviamos todos los detalles al mail que registraste.</h4>
+              <p>Tu código de orden es:</p>
+              <h5>{idOk}</h5>
+            </div>
+            <VolverAC />
+          </>
         )}
-      </form>
-    </div>
-      {ordenOk && (
-        <div className="alert alert-success" role={alert}>
-          <img src={approved} className=" img-fluid" />
-          <div>
-            <h1>Felicitaciones, tu compra fue exitosa😎</h1>
-            <h4>Te enviamos todos los detalles al mail que registraste.</h4>
-            <p>Tu código de orden es:</p>
-            <h5>{idOk}</h5>
-          </div>
-          <VolverAC />
-        </div>
-      )}
+      </div>
     </>
   );
 };

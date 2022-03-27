@@ -9,18 +9,17 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
 
-  const getDatabyId = async () => {
-    let data = collection(db, "items");
-    let col = await getDocs(data);
-    let res = col.docs.map((doc) => (doc = { id: doc.id, ...doc.data() }));
-    res = res.filter((item) => item.id === id);
-
-    setData(res[0]);
-  };
-
   useEffect(() => {
+    const getDatabyId = async () => {
+      let data = collection(db, "items");
+      let col = await getDocs(data);
+      let res = col.docs.map((doc) => (doc = { id: doc.id, ...doc.data() }));
+      res = res.filter((item) => item.id === id);
+
+      setData(res[0]);
+    };
     getDatabyId();
-  }, []);
+  }, [id]);
 
   return (
     <div>
