@@ -4,11 +4,13 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 import ItemDetailContainer from "../components/itemDetailContainer/ItemDetailContainer";
 import Cart from "../components/cart/Cart";
-import Prueba from "../components/Prueba";
+import Header from "../components/header/Header";
+import Checkout from "../components/checkout/Checkout";
 
 const Rutas = () => {
   return (
       <BrowserRouter>
+      <Header />
       <Navbar />
       
       <Routes>
@@ -16,7 +18,7 @@ const Rutas = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/category/:categoryId" element={<ItemListContainer />}/>
-        <Route path="/desafiosAdeudados" element={<Prueba/>} />
+        <Route path="/checkout" element={<Checkout/>} />
       </Routes>
         <Footer />
     </BrowserRouter>

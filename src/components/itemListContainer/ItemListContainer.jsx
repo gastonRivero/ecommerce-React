@@ -3,9 +3,9 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../../service/firebase";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
+import Spinner from "../utilities/Utilities";
 
 const ItemListContainer = () => {
-
   const { categoryId } = useParams();
   const [data, setData] = useState(null);
 
@@ -19,8 +19,8 @@ const ItemListContainer = () => {
       if (categoryId === undefined) {
         setData(result);
       } else if (categoryId) {
-        let resFiltered = result.filter((e) => e.category === categoryId);
-        setData(resFiltered);
+        let reFiltered = result.filter((e) => e.category === categoryId);
+        setData(reFiltered);
       }
     } catch (error) {
       console.log(error);
@@ -33,7 +33,7 @@ const ItemListContainer = () => {
   return (
     <div>
       {data == null ? (
-        <h1> Cargando...</h1>
+       <Spinner />
       ) : (
         <div className="container-fluid">
           <ItemList bebidas={data} />

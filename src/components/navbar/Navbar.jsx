@@ -1,21 +1,17 @@
 import React from "react";
-import CartWidget from "../cart/CartWidget";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const categoria = [
     { id: 0, category: "Tequila" },
     { id: 1, category: "Whisky" },
-    { id: 2, category: "Ginebra" },
+    { id: 2, category: "Gin" },
     { id: 3, category: "Cerveza" },
   ];
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <NavLink className="navbar-brand" to={"/"}>
-          DISTILLAR
-        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -42,9 +38,6 @@ function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="d-flex justify-content-center">
-            <CartWidget />
-          </div>
         </div>
       </div>
     </nav>

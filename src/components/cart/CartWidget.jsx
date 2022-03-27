@@ -10,10 +10,10 @@ const CartWidget = () => {
   const { tot } = useContext(context);
 
   return (
-    <div>
+    <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
       <NavLink
         to={"/cart"}
-        className="d-flex"
+        className="d-flex "
         style={{
           border: "none",
           fontSize: "2rem",

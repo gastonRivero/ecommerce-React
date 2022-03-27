@@ -3,6 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../../service/firebase";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../itemDetail/ItemDetail";
+import Spinner from "../utilities/Utilities";
 
 
 
@@ -27,7 +28,7 @@ const ItemDetailContainer = () => {
   return (
     <div>
     {data == null ? (
-      <h1> Cargando...</h1>
+      <Spinner />
     ) : (
       <div className="container-fluid">
         <ItemDetail item={data}/>

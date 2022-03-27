@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import context from "../../context/context";
+import "./../cart/cart.css"
 
 const CartItem = ({ item, e, setE }) => {
   const { carrito, setCarrito, tot, setTot, value, setValue } =
@@ -58,48 +59,46 @@ const CartItem = ({ item, e, setE }) => {
     }
   };
   return (
-    <div className="card mb-3" style={{ maxWidth: "540px" }}>
-      <div className="row g-0">
-        <div className="col-md-4">
-          <img
-            src={item.i.item.imagen}
-            className="img-fluid rounded-start"
-            alt={item.i.item.name}
-          />
-        </div>
-        <div className="col-md-8">
-          <div className="card-body">
-            <h5 className="card-title">{item.i.item.name}</h5>
-            <p className="card-text">{item.i.item.description}</p>
-            <div className="card-text">
-              <h5 className="card-title">Cantidad: {item.count}</h5>
-              <p>Precio por unidad: $ {item.i.item.precio}</p>
-            </div>
-            <button
-              className=" btn btn-danger"
-              style={{ width: "20vh" }}
-              onClick={removeItem}
-            >
-              Quitar producto
-            </button>
-            <button
-              className=" btn btn-danger"
-              style={{ width: "20vh" }}
-              onClick={quitarProducto}
-            >
-              -
-            </button>
-            <button
-              className=" btn btn-danger"
-              style={{ width: "20vh" }}
-              onClick={agregarProducto}
-            >
-              +
-            </button>
-          </div>
-        </div>
-      </div>
+    <>
+    <div id="cart-container" className="container my-5">
+      <table style={{ width: "100%" }}>
+        <tbody>
+          <tr>
+            <td>
+              <button className=" btn btn-danger" onClick={removeItem}>
+                x
+              </button>
+            </td>
+            <td>
+              <img
+                src={item.i.item.imagen}
+                className="img-fluid rounded-start"
+                alt={item.i.item.name}
+                style={{ }}
+              />
+            </td>
+            <td>
+              <h5>{item.i.item.name}</h5>
+            </td>
+            <td>
+              <p> $ {item.i.item.precio}</p>
+            </td>
+            <td className="w25 pl-1">
+              <h5> {item.count}</h5>
+            </td>
+            <td>
+              <button className=" btn btn-danger" onClick={quitarProducto}>
+                -
+              </button>
+              <button className=" btn btn-danger" onClick={agregarProducto}>
+                +
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </>
   );
 };
 

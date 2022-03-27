@@ -1,5 +1,51 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+}
+
+html {
+
+
+  cursor: context-menu;
+}
+
+body {
+  background-color: white;
+
+
+}
+
 .App {
   text-align: center;
+
 }
 
 
+.footerH li {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 30px;
+  display: inline;
+  padding: 2rem;
+  margin: auto;
+  display: inline;
+  padding: 2rem;
+  margin: auto;
+}
+
+.footerH a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.mFo {
+  margin-top: 20vh;
+color: azure;
+}
+
+.spin {
+  margin-top: 30vh;
+}
