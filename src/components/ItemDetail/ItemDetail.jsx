@@ -113,7 +113,7 @@ export const ItemDetail = ({ item }) => {
         <div className="col-md-8">
           <div className="card-body">
             <h4 className="card-title">{item.name}</h4>
-            <p className="p-card card-text" style={{ height: "3rem" }}>
+            <p className="p-card card-text">
               {item.description}
             </p>
             <h5 className="h-card card-title ">$ {item.precio}</h5>

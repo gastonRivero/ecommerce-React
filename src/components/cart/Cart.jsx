@@ -29,9 +29,8 @@ const Cart = () => {
             <h2 className="font-weight-bold pt-5"> Tu Carrito</h2>
             <hr />
           </div>
-
           <div id="cart-container" className="container my-1 ">
-            <table style={{ width: "100%" }}>
+            <table>
               <thead>
                 <tr>
                   <td>Borrar</td>

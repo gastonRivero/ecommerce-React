@@ -92,7 +92,7 @@ const CartItem = ({ item, e, setE }) => {
                   -
                 </button>
                 <button
-                  className=" btn btn-success m-2"
+                  className=" btn btn-success m-2 px-9"
                   onClick={agregarProducto}
                 >
                   +

@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
 import context from "../../context/context";
 import useFireStore from "../../hooks/useFireStore";
-import Spinner, { VolverAC } from "../utilities/Utilities";
 import approved from "../../assets/img/approved.png";
+import Spinner from "../utilities/Utilities";
+import { Link } from "react-router-dom";
+
 const Checkout = () => {
-  const { carrito, value } = useContext(context);
+  const { carrito, value,setCarrito,setTot,setValue } = useContext(context);
   const [form, setForm] = useState({
     buyer: {
       name: "",
@@ -14,6 +16,11 @@ const Checkout = () => {
     items: carrito,
     total: value,
   });
+  const vaciarCarrito = () => {
+    setCarrito([]);
+    setTot(0);
+    setValue(0);
+  };
 
   const { generateOrder, load, ordenOk, idOk } = useFireStore();
 
@@ -100,7 +107,11 @@ const Checkout = () => {
               <p>Tu código de orden es:</p>
               <h5>{idOk}</h5>
             </div>
-            <VolverAC />
+            <div className="my-5">
+            <Link className=" btn btn-danger" onClick={vaciarCarrito} to={"/"}>
+              Volver a comprar
+            </Link>
+            </div>
           </>
         )}
       </div>

@@ -1,12 +1,11 @@
 #cart-container {
     overflow-x: auto;
-
-}
-
-#cart-container table {
+}  
+    
+    #cart-container table{
     border-collapse: collapse;
     width: 100%;
-    table-layout: fixed;
+    table-layout:fixed;
     white-space: nowrap;
 }
 
@@ -27,18 +26,20 @@
 }
 
 #cart-container table td:nth-child(1) {
-    width: 100px;
+    width: 10vh;
 }
 
 #cart-container table td:nth-child(2),
 #cart-container table td:nth-child(3) {
-    width: 200px;
+    width: 20vh;
+    text-align:center;
+    white-space: normal;
 }
 
 #cart-container table td:nth-child(4),
 #cart-container table td:nth-child(5),
 #cart-container table td:nth-child(6) {
-    width: 170;
+    width: 15vh;
 }
 
 #cart-container table tbody img {
