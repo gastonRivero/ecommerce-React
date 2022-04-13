@@ -86,13 +86,13 @@ const CartItem = ({ item, e, setE }) => {
               </td>
               <td>
                 <button
-                  className=" btn btn-secondary m-2 px-9"
+                  className=" btn btn-secondary m-2"
                   onClick={quitarProducto}
                 >
                   -
                 </button>
                 <button
-                  className=" btn btn-success m-2 px-9"
+                  className=" btn btn-success m-2"
                   onClick={agregarProducto}
                 >
                   +

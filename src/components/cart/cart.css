@@ -39,8 +39,9 @@
 #cart-container table td:nth-child(4),
 #cart-container table td:nth-child(5),
 #cart-container table td:nth-child(6) {
-    width: 15vh;
+    width: 20vh;
 }
+
 
 #cart-container table tbody img {
     width: 100px;
