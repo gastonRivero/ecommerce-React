@@ -4,7 +4,7 @@ import ItemCount from "../counter/ItemCount";
 import { Link } from "react-router-dom";
 import { VolverAC } from "../utilities/Utilities";
 
-export const ItemDetail = ({ item }) => {
+ const ItemDetail = ({ item }) => {
   //Estado encargado de contar la cantidad de productos
   const [count, setCount] = useState(1);
   //Función encargada de gestionar la cantidad de productos seleccionados
