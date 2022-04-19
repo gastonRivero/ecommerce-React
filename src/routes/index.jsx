@@ -13,11 +13,17 @@ const Rutas = () => {
       <Header />
       <Navbar />
       <Routes>
+
         <Route path="/" element={<ItemListContainer />} />
+
         <Route path="/cart" element={<Cart />} />
+
         <Route path="/item/:id" element={<ItemDetailContainer />} />
+
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
+
         <Route path="/checkout" element={<Checkout />} />
+        
       </Routes>
       <Footer />
     </BrowserRouter>
