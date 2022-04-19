@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../service/firebase";
 import { useParams } from "react-router-dom";
-import ItemDetail from "../itemDetail/ItemDetail";
 import Spinner from "../utilities/Utilities";
+import ItemDetail from "../itemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();

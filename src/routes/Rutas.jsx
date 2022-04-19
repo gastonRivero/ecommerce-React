@@ -2,10 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "../components/itemListContainer/ItemListContainer";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
-import ItemDetailContainer from "../components/itemDetailContainer/ItemDetailContainer"
 import Cart from "../components/cart/Cart";
 import Header from "../components/header/Header";
 import Checkout from "../components/checkout/Checkout";
+import ItemDetailContainer from "../components/itemDetailContainer/ItemDetailContainer";
+
 
 const Rutas = () => {
   return (
