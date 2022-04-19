@@ -59,49 +59,43 @@ const CartItem = ({ item, e, setE }) => {
   };
   return (
     <>
-      <div id="cart-container" className="container my-5">
-        <table style={{ width: "100%" }}>
-          <tbody>
-            <tr>
-              <td>
-                <button className=" btn btn-danger" onClick={removeItem}>
-                  x
-                </button>
-              </td>
-              <td>
-                <img
-                  src={item.i.item.imagen}
-                  className="img-fluid rounded-start"
-                  alt={item.i.item.name}
-                />
-              </td>
-              <td>
-                <h5>{item.i.item.name}</h5>
-              </td>
-              <td>
-                <p> $ {item.i.item.precio}</p>
-              </td>
-              <td>
-                <h5> {item.count}</h5>
-              </td>
-              <td>
-                <button
-                  className=" btn btn-secondary m-2"
-                  onClick={quitarProducto}
-                >
-                  -
-                </button>
-                <button
-                  className=" btn btn-success m-2"
-                  onClick={agregarProducto}
-                >
-                  +
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <tr>
+        <td>
+          <button className=" btn btn-danger" onClick={removeItem}>
+            x
+          </button>
+        </td>
+        <td>
+          <img
+            src={item.i.item.imagen}
+            className="img-fluid rounded-start"
+            alt={item.i.item.name}
+          />
+        </td>
+        <td>
+          <h5>{item.i.item.name}</h5>
+        </td>
+        <td>
+          <p> $ {item.i.item.precio}</p>
+        </td>
+        <td>
+          <h5> {item.count}</h5>
+        </td>
+        <td>
+          <button
+            className=" btn btn-secondary m-2"
+            onClick={quitarProducto}
+          >
+            -
+          </button>
+          <button
+            className=" btn btn-success m-2"
+            onClick={agregarProducto}
+          >
+            +
+          </button>
+        </td>
+      </tr>
     </>
   );
 };

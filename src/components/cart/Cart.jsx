@@ -30,7 +30,7 @@ const Cart = () => {
             <hr />
           </div>
           <div id="cart-container" className="container my-1 ">
-            <table>
+          <table>
               <thead>
                 <tr>
                   <td>Borrar</td>
@@ -41,15 +41,18 @@ const Cart = () => {
                   <td>Acciones</td>
                 </tr>
               </thead>
+              <tbody>
+                {
+                    carrito.map((producto) => {
+                      return (
+                        <CartItem key={producto.i.item.id} item={producto} e={e} setE={setE} />
+                      );
+                    })
+                 }
+              </tbody>
             </table>
           </div>
-          {carrito.map((producto) => {
-            return (
-              <div key={producto.i.item.id}>
-                <CartItem item={producto} e={e} setE={setE} />
-              </div>
-            );
-          })}
+          
           <div className="my-5">
             <button className=" btn btn-danger" onClick={vaciarCarrito}>
               Vaciar carrito
