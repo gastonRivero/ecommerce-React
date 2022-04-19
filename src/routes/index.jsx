@@ -24,4 +24,4 @@ const Rutas = () => {
   );
 };
 
-export default Rutas;
+export default Ruta;
